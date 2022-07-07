@@ -10,6 +10,9 @@ pool:
   vmImage: vs2017-vin2016
 
 steps:
-# 
+- task: katalonTask@1
+  inputs:
+    version: '8.2.5'
+    executeArgs: '-browserType="Chrome" -apiKey=$(APIKEY) -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
 
 
